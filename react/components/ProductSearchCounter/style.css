@@ -1,0 +1,74 @@
+  :root{
+    --percentage-products: 180deg;
+  }
+  
+  .circleWrap {
+    position: fixed;
+    bottom: 78px;
+    right: 16px;
+
+    width: 46px;
+    height: 46px;
+    background: #FCD7A4;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  .circleWrap .circle .mask,
+  .circleWrap .circle .fill {
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: content-box;
+  }
+  
+  .circleWrap .circle .mask {
+    clip: rect(0px, 46px, 46px, 23px);
+  }
+  
+  .circleWrap .insideCircle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #d2eaf1;
+    line-height: auto;
+    text-align: center;
+    margin-top: 2px;
+    margin-left: 2px;
+    color: #964b07;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 3px;
+    box-sizing: content-box;
+  }
+  
+  .mask .fill {
+    clip: rect(0px, 23px, 46px, 0px);
+    background-color: #964b07;;
+    box-sizing: content-box;
+  }
+  
+  .mask.full,
+  .circle .fill {
+    box-sizing: content-box;
+    animation: fill ease-in-out 3s;
+    transform: rotate(var(--percentage-products));
+  }
+  
+  @keyframes fill{
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(var(--percentage-products));
+    }
+  }
+
+@media screen and (min-width: 1024px) {
+    .circleWrap {
+        bottom: 93px;
+        right: 23px;
+    }
+}

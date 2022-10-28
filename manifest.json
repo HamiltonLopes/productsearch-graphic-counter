@@ -1,0 +1,21 @@
+{
+  "vendor": "acctglobal",
+  "name": "productsearch-graphic-counter",
+  "version": "0.0.1",
+  "title": "Product Search Counter",
+  "description": "A counter on the back to top button to render the amount of product",
+  "builders": {
+    "store": "0.x",
+    "react": "3.x",
+    "messages": "1.x",
+    "docs": "0.x"
+  },
+  "dependencies": {
+    "vtex.search-page-context": "0.x"
+  },
+  "registries": [
+    "smartcheckout"
+  ],
+  "policies": [],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
